@@ -1,0 +1,12 @@
+.send-button.send-button-border {
+    border: 2px solid var(--color-black);
+}
+
+.send-button.send-button-no-border {
+    padding: 0;
+}
+
+.send-button.send-button-filled {
+    background-color: var(--color-black);
+    color: var(--color-white);
+}

@@ -1,0 +1,101 @@
+title: libis.forms.page.form.title
+
+options:
+  create: 
+    *: false
+    admin: true
+    supervisor: true
+  delete: 
+    *: false
+    admin: true
+    supervisor: true
+  changeStatus: 
+    *: false
+    admin: true
+    supervisor: true
+  changeTitle: 
+    *: false
+    admin: true
+    supervisor: true
+  changeSlug: 
+    *: false
+    admin: true
+    supervisor: true
+  changeTemplate: 
+    *: false
+    admin: true
+    supervisor: true
+  duplicate: 
+    *: false
+    admin: true
+    supervisor: true
+  update:
+    *: false
+    admin: true
+    supervisor: true
+create:
+  status: listed
+  
+tabs:
+  main:
+    label: libis.forms.content
+    icon: text-left
+    sections:
+      main:
+        type: fields
+        fields:
+          warning:
+            label: false
+            type: info
+            theme: info
+            text: libis.forms.page.form.warning
+          formfields:
+            type: blocks
+            pretty: true
+            label: libis.forms.page.form.formfields
+            fieldsets:
+              - input
+              - textarea
+              - checkbox
+              - select
+              - file
+  settings:
+    label: libis.forms.settings
+    icon: settings
+    sections:
+      setting:
+        type: fields
+        fields:
+          sendMail:
+            default: test@test.com
+            type: email
+            label: libis.forms.page.form.send.mail
+            info: libis.forms.page.form.send.mail.info
+            required: true
+            width: 1/2
+          receiveMail:
+            default: test@test.com
+            type: email
+            label: libis.forms.page.form.receive.mail
+            info: libis.forms.page.form.receive.mail.info
+            required: true
+            width: 1/2
+          sendButtonText:
+            label: libis.forms.sendbutton.text
+            type: text
+            default: Verzenden
+            required: true
+            width: 1/2
+          sendButtonType:
+            label: libis.forms.sendbutton.type
+            type: select
+            default: no-border
+            required: true
+            translate: false
+            options:
+              no-border: libis.forms.button.type.noborder
+              border: libis.forms.button.type.border
+              filled: libis.forms.button.type.filled
+            width: 1/2
+        
+      

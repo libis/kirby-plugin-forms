@@ -1,0 +1,12 @@
+name: libis.forms.block.form.name
+icon: dashboard
+preview: formselect
+
+fields:
+  formPage:
+    label: libis.forms.block.form.name
+    info: libis.forms.block.form.info
+    type: select
+    options:
+      type: query
+      query: site.find('forms').children

@@ -1,0 +1,76 @@
+{
+"libis.forms": "Forms",
+    "libis.forms.problem": "There is a problem",
+    "libis.forms.label": "Label",
+    "libis.forms.uniqueidentifier": "Unique ID",
+    "libis.forms.placeholder": "Placeholder",
+    "libis.forms.required": "Required field?",
+    "libis.forms.size.width": "Width of the field in the front-end",
+    "libis.forms.value": "Value",
+    "libis.forms.options": "Options",
+    "libis.forms.content": "Content",
+    "libis.forms.settings": "Settings",
+    "libis.forms.sendbutton.text": "Send button text",
+    "libis.forms.sendbutton.type": "Send button type",
+    "libis.forms.button.type.noborder": "No border / no background color",
+    "libis.forms.button.type.border": "Border",
+    "libis.forms.button.type.filled": "Background color",
+
+    "libis.forms.files.begin.info": "(Maximum {max} image(s) in jpg/jpeg/png format. Max 2MB.)",
+    "libis.forms.GDPR": "I agree that the data I have entered above may be forwarded to the website administrator for processing this form.",
+
+    "libis.forms.imageInfo": "File: {name}, Size: {size}",
+    "libis.forms.wrongFileExtension": "{name} is not a valid file type.",
+    "libis.forms.toManyFiles": "A maximum of {fileMax} files is allowed. You have selected {fileslength}.",
+    "libis.forms.sizeToBig": "You selected some files that are too large. The maximum upload size is 2MB. We have removed these files.",
+
+    "libis.forms.text.input.error": "The entered value for the field: {key} is not a valid value for a text field. Entered value is: {value}",
+    "libis.forms.email.input.error": "The entered value for the field: {key} is not in a valid email format. Entered value is: {value}",
+    "libis.forms.tel.input.error": "The entered value for the field: {key} is not a valid value for a telephone field. Entered value is: {value}",
+    "libis.forms.url.input.error": "The entered value for the field: {key} is not in a valid URL format. Entered value is: {value}",
+    "libis.forms.number.input.error": "The entered value for the field: {key} is not a valid value for a number. It must be a positive number. Entered value is: {value}",
+    "libis.forms.files.error": "{name} cannot be uploaded.",
+    "libis.forms.files.size": "{name} is too large. It must be no more than 2MB.",
+    "libis.forms.files.type": "{name} does not match the allowed file formats (jpg, jpeg, png)",
+
+    "libis.forms.unvalid.recaptcha": "Please complete the recaptcha.",
+
+    "libis.forms.went.wrong": "Something went wrong while sending. Please try again later. If this problem persists, contact the website administrator.",    
+    "libis.forms.went.wrong.mail.admin": "Something went wrong while sending the administrator’s data.",
+    "libis.forms.went.wrong.mail.user": "Something went wrong while sending a confirmation of the data to the email address you provided.",
+
+    "libis.forms.succes.send.message": "Your data has been successfully sent.",
+
+    "libis.forms.block.form.name": "Form",
+    "libis.forms.block.form.info": "Select the form you want to import",
+
+    "libis.forms.block.input.name": "Input field",
+    "libis.forms.block.input.type": "Input type",
+    "libis.forms.block.input.type.option.text": "Text",
+    "libis.forms.block.input.type.option.number": "Number",
+    "libis.forms.block.input.type.option.email": "Email",
+    "libis.forms.block.input.type.option.tel": "Telephone number",
+    "libis.forms.block.input.type.option.url": "Url",
+
+    "libis.forms.block.textarea.name": "Textarea",
+    "libis.forms.block.textarea.rows": "Number of rows visible for the textarea",
+    "libis.forms.block.textarea.rows.after": "row(s)",
+
+    "libis.forms.block.checkbox.name": "Checkbox",
+
+    "libis.forms.block.select.name": "Dropdown",
+    "libis.forms.sub.block.selectoption.name": "Dropdown option",
+
+    "libis.forms.block.file.name": "File input",
+    "libis.forms.block.file.max.files": "Maximum number of files",
+    "libis.forms.block.file.max.files.info": "How many files the user may upload in the form.",
+    "libis.forms.block.file.info": "Dear editor, <br> At the moment we only support uploading images in a file upload field.",
+
+    "libis.forms.page.form.title": "Form",
+    "libis.forms.page.form.warning": "Dear editor,<br>Make sure that every form always contains an email field. This field must always have the unique ID 'email' (to be filled in under the field 'Unique ID').<br>If no field with the ID 'email' is added, an email field will automatically be inserted at the top of the web page.<br><br>Additionally, it is mandatory to assign a unique ID to each field. If this is not done, errors may occur on the web page.",
+    "libis.forms.page.form.formfields": "Form fields",
+    "libis.forms.page.form.send.mail": "Send email address",
+    "libis.forms.page.form.send.mail.info": "Email address from which the form will be sent",
+    "libis.forms.page.form.receive.mail": "Receive email address",
+    "libis.forms.page.form.receive.mail.info" : "Email address to which the form may be sent after the user has completed it."
+}

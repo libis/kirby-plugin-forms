@@ -1,0 +1,39 @@
+.form-file-block h5 {
+    width: fit-content;
+}
+
+.form-file-block h5 .form-text-hidden {
+    display: none;
+}
+
+.form-file-block input {
+    display: none;
+}
+
+.form-file-block .preview.file-empty {
+    display: none;
+}
+
+.form-file-block .preview ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-file-block .preview ul li { 
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.form-file-block .preview ul li img { 
+    height: 60px;
+    width: 60px;
+    object-fit: cover;
+}
+
+.form-file-block .preview .file-delete-btn {
+    color: var(--color-red-800);
+}

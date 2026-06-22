@@ -1,0 +1,28 @@
+@import './checkbox.css';
+@import './select.css';
+@import './file.css';
+@import './sendButton.css';
+
+.restricted-field h5::after {
+  content: "*";
+  font-size: 20px;
+  font-family: 'Arial', sans-serif;
+  color: oklch(57.7% 0.245 27.325);
+  margin-left: 5px;
+  margin-top: 2px;
+  position: absolute;
+}
+
+textarea {
+  resize: none;
+}
+
+.dynamic-width {
+  width: 100%
+}
+
+@media screen and (min-width: 768px) {
+  .dynamic-width {
+    width: calc(var(--block-width) - var(--block-offset));
+  }
+}

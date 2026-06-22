@@ -1,0 +1,76 @@
+{
+    "libis.forms": "Formulaires",
+    "libis.forms.problem": "Il y a un problème",
+    "libis.forms.label": "Étiquette",
+    "libis.forms.uniqueidentifier": "ID unique",
+    "libis.forms.placeholder": "Placeholder",
+    "libis.forms.required": "Champ obligatoire ?",
+    "libis.forms.size.width": "Largeur du champ dans le front-end",
+    "libis.forms.value": "Valeur",
+    "libis.forms.options": "Options",
+    "libis.forms.content": "Contenu",
+    "libis.forms.settings": "Paramètres",
+    "libis.forms.sendbutton.text": "Texte du bouton d'envoi",
+    "libis.forms.sendbutton.type": "Type de bouton d'envoi",
+    "libis.forms.button.type.noborder": "Pas de bordure / pas de couleur de fond",
+    "libis.forms.button.type.border": "Bordure",
+    "libis.forms.button.type.filled": "Couleur de fond",
+
+    "libis.forms.files.begin.info": "(Maximum {max} image(s) au format jpg/jpeg/png. Max 2 Mo.)",
+    "libis.forms.GDPR": "J'accepte que les données que j'ai saisies ci-dessus soient transmises à l'administrateur du site pour le traitement de ce formulaire.",
+
+    "libis.forms.imageInfo": "Fichier : {name}, Taille : {size}",
+    "libis.forms.wrongFileExtension": "{name} n'est pas un type de fichier valide.",
+    "libis.forms.toManyFiles": "Maximum {fileMax} fichiers autorisés. Vous en avez sélectionné {fileslength}.",
+    "libis.forms.sizeToBig": "Vous avez sélectionné des fichiers trop volumineux. La taille maximale de téléchargement est de 2 MB. Ces fichiers ont été supprimés.",
+
+    "libis.forms.text.input.error": "La valeur saisie pour le champ : {key} n'est pas valide pour un champ texte. Valeur saisie : {value}",
+    "libis.forms.email.input.error": "La valeur saisie pour le champ : {key} n'est pas dans un format email valide. Valeur saisie : {value}",
+    "libis.forms.tel.input.error": "La valeur saisie pour le champ : {key} n'est pas valide pour un champ téléphone. Valeur saisie : {value}",
+    "libis.forms.url.input.error": "La valeur saisie pour le champ : {key} n'est pas dans un format d'URL valide. Valeur saisie : {value}",
+    "libis.forms.number.input.error": "La valeur saisie pour le champ : {key} n'est pas valide pour un nombre. Ce doit être un nombre positif. Valeur saisie : {value}",
+    "libis.forms.files.error": "{name} ne peut pas être téléchargé.",
+    "libis.forms.files.size": "{name} est trop volumineux. La taille maximale est de 2 MB.",
+    "libis.forms.files.type": "{name} ne correspond pas aux formats de fichiers autorisés (jpg, jpeg, png)",
+
+    "libis.forms.unvalid.recaptcha": "Veuillez remplir le recaptcha.",
+
+    "libis.forms.went.wrong": "Une erreur s'est produite lors de l'envoi. Veuillez réessayer plus tard. Si le problème persiste, contactez l'administrateur du site.",    
+    "libis.forms.went.wrong.mail.admin": "Une erreur s'est produite lors de l'envoi des données à l'administrateur.",
+    "libis.forms.went.wrong.mail.user": "Une erreur s'est produite lors de l'envoi de la confirmation des données à l'adresse email que vous avez fournie.",
+
+    "libis.forms.succes.send.message": "Vos données ont été envoyées avec succès.",
+
+    "libis.forms.block.form.name": "Formulaire",
+    "libis.forms.block.form.info": "Sélectionnez le formulaire que vous souhaitez importer",
+
+    "libis.forms.block.input.name": "Champ de saisie",
+    "libis.forms.block.input.type": "Type de saisie",
+    "libis.forms.block.input.type.option.text": "Texte",
+    "libis.forms.block.input.type.option.number": "Nombre",
+    "libis.forms.block.input.type.option.email": "Email",
+    "libis.forms.block.input.type.option.tel": "Numéro de téléphone",
+    "libis.forms.block.input.type.option.url": "Url",
+
+    "libis.forms.block.textarea.name": "Zone de texte",
+    "libis.forms.block.textarea.rows": "Nombre de lignes visibles pour la zone de texte",
+    "libis.forms.block.textarea.rows.after": "ligne(s)",
+
+    "libis.forms.block.checkbox.name": "Case à cocher",
+
+    "libis.forms.block.select.name": "Liste déroulante",
+    "libis.forms.sub.block.selectoption.name": "Option de liste déroulante",
+
+    "libis.forms.block.file.name": "Champ de fichier",
+    "libis.forms.block.file.max.files": "Nombre maximal de fichiers",
+    "libis.forms.block.file.max.files.info": "Nombre de fichiers que l'utilisateur peut télécharger dans le formulaire.",
+    "libis.forms.block.file.info": "Cher éditeur, <br> Pour le moment, nous ne prenons en charge que le téléchargement d'images dans un champ de téléchargement de fichier.",
+
+    "libis.forms.page.form.title": "Formulaire",
+    "libis.forms.page.form.warning": "Cher éditeur,<br>Assurez-vous que chaque formulaire contienne toujours un champ email. Ce champ doit toujours recevoir l'ID unique 'email' (à remplir dans le champ 'ID unique').<br>Si aucun champ avec l'ID 'email' n'a été ajouté, un champ email sera automatiquement inséré en haut de la page web.<br><br>De plus, il est obligatoire d'attribuer un ID unique à chaque champ. Si cela n'est pas fait, des erreurs peuvent survenir sur la page web.",
+    "libis.forms.page.form.formfields": "Champs du formulaire",
+    "libis.forms.page.form.send.mail": "Adresse email d'envoi",
+    "libis.forms.page.form.send.mail.info": "Adresse email à partir de laquelle le formulaire sera envoyé",
+    "libis.forms.page.form.receive.mail": "Adresse email de réception",
+    "libis.forms.page.form.receive.mail.info" : "Adresse email à laquelle le message sera envoyé après que l'utilisateur l'aura rempli."
+}

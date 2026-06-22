@@ -1,0 +1,25 @@
+name: libis.forms.block.checkbox.name
+icon: checklist
+
+fields:
+  fieldlabel:
+    label: libis.forms.label
+    type: text
+    width: 1/2
+    required: true
+  uniqueidentifier:
+    label: libis.forms.uniqueidentifier
+    type: slug
+    required: true
+    wizard:
+      text: " "
+      field: fieldlabel
+    width: 1/2
+  value:
+    label: libis.forms.value
+    type: text
+    width: 1/2
+  required:
+    label: libis.forms.required
+    type: toggle
+    width: 1/2

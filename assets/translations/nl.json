@@ -1,0 +1,76 @@
+{
+    "libis.forms": "Formulieren",
+    "libis.forms.problem": "Er is een probleem",
+    "libis.forms.label": "Label",
+    "libis.forms.uniqueidentifier": "Uniek id",
+    "libis.forms.placeholder": "Placeholder",
+    "libis.forms.required": "Verplicht veld?",
+    "libis.forms.size.width": "Breedte van het veld in de front-end",
+    "libis.forms.value": "Waarde",
+    "libis.forms.options": "Opties",
+    "libis.forms.content": "Inhoud",
+    "libis.forms.settings": "Instellingen",
+    "libis.forms.sendbutton.text": "Tekst verzendbutton",
+    "libis.forms.sendbutton.type": "Type verzendbutton",
+    "libis.forms.button.type.noborder": "Geen border / geen achtergrondkleur",
+    "libis.forms.button.type.border": "Border",
+    "libis.forms.button.type.filled": "Achtergrondkleur",
+
+    "libis.forms.files.begin.info": "(Maximum {max} afbeelding(en) van het formaat jpg/jpeg/png. Max 2MB.)",
+    "libis.forms.GDPR": "Ik ga er mee akoord dat de gegevens die ik hierboven heb ingevuld doorgestuurd mogen worden naar de beheerder van de website voor het verweken van het formulier.",
+
+    "libis.forms.imageInfo": "Bestand: {name}, Grootte: {size}",
+    "libis.forms.wrongFileExtension": "{name} is geen geldig bestandstype.",
+    "libis.forms.toManyFiles": "Maximaal {fileMax} bestanden toegestaan. Je hebt er {fileslength} geselecteerd.",
+    "libis.forms.sizeToBig": "Je hebt enkele files geselecteerd die te groot zijn. De maximum upload grootte is 2MB. We hebben deze files verwijderd.",
+
+    "libis.forms.text.input.error": "De opgegeven waarde voor het veld: {key} is geen geldige waarde voor een tekst veld. Opgegeven waarde is: {value}",
+    "libis.forms.email.input.error": "De opgegeven waarde voor het veld: {key} is niet van een geldig email formaat. Opgegeven waarde is: {value}",
+    "libis.forms.tel.input.error": "De opgegeven waarde voor het veld: {key} is geen geldige waarde voor een telefoon veld. Opgegeven waarde is: {value}",
+    "libis.forms.url.input.error": "De opgegeven waarde voor het veld: {key} is niet van een geldig url formaat. Opgegeven waarde is: {value}",
+    "libis.forms.number.input.error": "De opgegeven waarde voor het veld: {key} is geen geldige waarde voor een nummer. Het moet een positief nummer zijn. Opgegeven waarde is: {value}",
+    "libis.forms.files.error": "{name} kan niet upgeload worden.",
+    "libis.forms.files.size": "{name} is te groot. Het mag maar 2MB zijn.",
+    "libis.forms.files.type": "{name} is niet gelijk aan de teogestane bestandformaten (jpg, jpeg, png)",
+
+    "libis.forms.unvalid.recaptcha": "Gelieve de recaptcha in te vullen.",
+
+    "libis.forms.went.wrong": "Er liep iets mis bij het verzenden. Probeer het later opnieuw. Blijft dit probleem zich voordoen neem dan contact op met de beheerder van de website.",    
+    "libis.forms.went.wrong.mail.admin": "Er liep iets mis tijdens het verzenden van de gegevens van de beheerder.",
+    "libis.forms.went.wrong.mail.user": "Er liep iets mis tijdens het verzenden van een bevestiging van de gegevens naar de op jouw opgegeven email adres.",
+
+    "libis.forms.succes.send.message": "Je gegevens zijn met succes verzonden.",
+
+    "libis.forms.block.form.name": "Formulier",
+    "libis.forms.block.form.info": "Selecteer het formulier dat je wilt importeren",
+
+    "libis.forms.block.input.name": "Input veld",
+    "libis.forms.block.input.type": "Input type",
+    "libis.forms.block.input.type.option.text": "Tekst",
+    "libis.forms.block.input.type.option.number": "Nummer",
+    "libis.forms.block.input.type.option.email": "Email",
+    "libis.forms.block.input.type.option.tel": "Telefoonnummer",
+    "libis.forms.block.input.type.option.url": "Url",
+
+    "libis.forms.block.textarea.name": "Tekstvlak",
+    "libis.forms.block.textarea.rows": "Aantal rijen zichtbaar voor het tekstvlak",
+    "libis.forms.block.textarea.rows.after": "rij(en)",
+
+    "libis.forms.block.checkbox.name": "Checkbox",
+
+    "libis.forms.block.select.name": "Selectievak",
+    "libis.forms.sub.block.selectoption.name": "Selectievak optie",
+
+    "libis.forms.block.file.name": "File input",
+    "libis.forms.block.file.max.files": "Maximum aantal bestanden",
+    "libis.forms.block.file.max.files.info": "Hoeveel bestanden mag de gebruiker ingeven in het formulier.",
+    "libis.forms.block.file.info": "Beste editor, <br> Op dit moment ondersteunen we enkel de mogelijkheid om afbeeldingen te kunnen uploaden in een file upload veld.",
+
+    "libis.forms.page.form.title": "Formulier",
+    "libis.forms.page.form.warning": "Beste editor,<br>Zorg ervoor dat elk formulier altijd een e-mailveld bevat. Dit veld moet steeds de unieke ID email krijgen (in te vullen bij het veld 'Unieke id').<br>Indien er geen veld met de ID email werd toegevoegd, zal automatisch een e-mailveld bovenaan de webpagina worden ingevoegd.<br><br>Daarnaast is het verplicht om elk veld een unieke ID mee te geven. Als dit niet gebeurt, kunnen er fouten optreden op de webpagina.",
+    "libis.forms.page.form.formfields": "Formulier velden",
+    "libis.forms.page.form.send.mail": "Verzend emailadres",
+    "libis.forms.page.form.send.mail.info": "Emailadres waarvan het formulier zal verzonden worden",
+    "libis.forms.page.form.receive.mail": "Ontvang emailadres",
+    "libis.forms.page.form.receive.mail.info" : "Emailadres waar de mail naar toe mag gestuurd worden nadat de gebruiker deze heeft ingevuld."
+}

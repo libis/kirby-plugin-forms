@@ -1,0 +1,41 @@
+name: libis.forms.block.textarea.name
+icon: text
+
+fields:
+  fieldlabel:
+    label: libis.forms.label
+    type: text
+    width: 1/2
+    required: true
+  uniqueidentifier:
+    label: libis.forms.uniqueidentifier
+    type: slug
+    required: true
+    wizard:
+      text: " "
+      field: fieldlabel
+    width: 1/2
+  rows: 
+    label: libis.forms.block.textarea.rows
+    type: number
+    default: 1
+    min: 1
+    max: 15
+    step: 1
+    after: libis.forms.block.textarea.rows.after
+  placeholder:
+    label: libis.forms.placeholder
+    type: text
+    width: 1/2
+  required:
+    label: libis.forms.required
+    type: toggle
+    width: 1/2
+  size:
+    label: libis.forms.size.width
+    type: select
+    default: 1/1
+    options:
+      1/1: 1/1
+      1/2: 1/2
+    width: 1/2

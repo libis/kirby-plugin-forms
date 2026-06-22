@@ -1,0 +1,28 @@
+name: libis.forms.block.file.name
+icon: image
+
+fields:
+  info:
+    type: info
+    text: libis.forms.block.file.info
+  fieldlabel:
+    label: libis.forms.label
+    type: text
+    width: 1/2
+    required: true
+  uniqueidentifier:
+    label: libis.forms.uniqueidentifier
+    type: slug
+    required: true
+    wizard:
+      text: " "
+      field: fieldlabel
+    width: 1/2
+  maximumFiles:
+    type: number
+    label: libis.forms.block.file.max.files
+    info: libis.forms.block.file.max.files.info
+    min: 1
+    max: 10
+    steps: 1
+    width: 1/2

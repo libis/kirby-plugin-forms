@@ -1,0 +1,25 @@
+title: libis.forms
+
+options:
+  create: 
+    *: false
+    admin: true
+  delete: false
+  changeStatus: 
+    *: false
+    admin: true
+  changeTitle: 
+    *: false
+    admin: true
+  changeSlug: false
+  changeTemplate: false
+  duplicate: false
+
+sections:
+  pages:
+    type: pages
+    label: libis.forms
+    type: pages
+    layout: list
+    status: all
+    template: form
