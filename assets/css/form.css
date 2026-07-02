@@ -8,6 +8,7 @@
   background-color: oklch(93.6% 0.032 17.717);
   padding: 15px 20px;
   border-left: 3px solid oklch(57.7% 0.245 27.325);
+  margin-bottom: 25px;
 }
 
 .form-errors .form-error-title {
@@ -38,7 +39,8 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 25px 20px;
+  column-gap: 20px;
+  row-gap: 25px;
   width: 100%;
 }
 

@@ -9,6 +9,7 @@
   position: absolute;
   width: 20px;
   height: 20px;
+  cursor: pointer;
 }
 
 .checkbox .checkbox-input--checkbox + h5 label {
@@ -17,6 +18,7 @@
   align-items: flex-start;
   gap: 10px;
   position: relative;
+  cursor: pointer;
 }
 
 .checkbox .checkbox-input--checkbox + h5 label:before {
@@ -70,4 +72,5 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  cursor: pointer;
 }
