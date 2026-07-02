@@ -1,5 +1,8 @@
 .checkbox {
   position: relative;
+  width: 100%;
+  display: flex;
+  gap: 10px;
 }
 
 .checkbox .checkbox-input--checkbox {
@@ -60,4 +63,11 @@
 
 .checkbox h5 {
   width: fit-content;
+}
+
+.checkbox-gdpr {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }

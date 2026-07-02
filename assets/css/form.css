@@ -1,0 +1,66 @@
+.form-succes {
+  background-color: oklch(96.2% 0.044 156.743);
+  padding: 15px 20px;
+  border-left: 3px solid oklch(62.7% 0.194 149.214);
+}
+
+.form-errors {
+  background-color: oklch(93.6% 0.032 17.717);
+  padding: 15px 20px;
+  border-left: 3px solid oklch(57.7% 0.245 27.325);
+}
+
+.form-errors .form-error-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.form-errors .error-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  list-style: disc;
+}
+
+.form-errors .error-list li {
+  margin-left: 18px;
+}
+
+.form-block .form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+}
+
+.form-block .form-wrapper .fields {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 25px 20px;
+  width: 100%;
+}
+
+.form-block .form-wrapper .fields .email-field-restricted {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-block .form-wrapper .fields .email-field-restricted input {
+  width: 100%;
+  border-radius: 4px;
+  border: 2px solid #000000;
+  padding: 5px;
+}
+
+.form-block .form-wrapper .fields .email-field-restricted input.error {
+  border: 2px solid oklch(44.4% 0.177 26.899);
+}
+
+.form-block .form-wrapper .fields .email-field-restricted-text {
+  color: oklch(44.4% 0.177 26.899);
+  font-size: 1rem;
+}

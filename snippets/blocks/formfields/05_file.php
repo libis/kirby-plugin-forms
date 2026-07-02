@@ -1,5 +1,5 @@
-<h5>
-    <label class="font-semibold underline" for="<?= $block->uniqueidentifier()?>">
+<h5 class="file-selector">
+    <label class="file-selector-label" for="<?= $block->uniqueidentifier()?>">
         <?= ucfirst($block->fieldlabel())?>
     </label> &nbsp;
     <span class="max-files">
@@ -10,12 +10,12 @@
         ?>
     </span>
     <span class="file-error w-full flex flex-col">
-        <span class="file-before-error form-text-hidden text-red-800"></span>
-        <span class="file-after-error text-red-800">
+        <span class="file-before-error form-text-hidden"></span>
+        <span class="file-after-error">
             <?php if($errors != NULL && isset($errors['data']) && isset($errors['data'][$block->uniqueidentifier()->value()])): ?>
                 <ul class="list-disc">
                     <?php foreach($errors['data'][$block->uniqueidentifier()->value()] as $error): ?>
-                        <li class="ml-20"><?= $error ?></li>
+                        <li><?= $error ?></li>
                     <?php endforeach; ?>
                 </ul>
             <?php endif; ?>

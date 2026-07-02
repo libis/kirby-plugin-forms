@@ -13,37 +13,37 @@
 ?>
 
 <?php if($succes != null): ?>
-  <div class="form-succes bg-green-100 px-20 py-15 border-l-3 border-green-600 border-solid">
+  <div class="form-succes">
     <?= $succes ?>
   </div>
 <?php else: ?>
   <?php if($errors != null): ?>
-    <div class="form-errors bg-red-100 px-20 py-15 border-l-3 border-red-600 border-solid mb-25">
-      <p class="text-xl font-semibold mb-5"><?= t('libis.forms.problem', null, $language)?><p>
-      <ul class="flex flex-col gap-5 list-disc">
+    <div class="form-errors">
+      <p class="form-error-title"><?= t('libis.forms.problem', null, $language)?><p>
+      <ul class="error-list">
         <?php foreach($errors as $key => $error): ?>
           <?php if($key != "data" && $key != "mail"): ?>
-            <li class="ml-18"><?= $error ?></li>
+            <li><?= $error ?></li>
           <?php elseif($key == 'mail'): ?>
             <?php foreach($errors['mail'] as $key => $error): ?>
-              <li class="ml-18"><?= $error ?></li>
+              <li><?= $error ?></li>
             <?php endforeach ?>
           <?php endif; ?>
         <?php endforeach ?>
       </ul>
     </div>
   <?php endif; ?>
-  <form class="form" method="post" id="<?= $block->id() ?>" action="/form-send" data-block="<?= $block->id() ?>" enctype="multipart/form-data" data-language="<?= $language ?>"> 
+  <form class="form form-block" method="post" id="<?= $block->id() ?>" action="/form-send" data-block="<?= $block->id() ?>" enctype="multipart/form-data" data-language="<?= $language ?>"> 
     <input type="hidden" name="csrf" value="<?= csrf() ?>">
     <input type="hidden" name="origin" value="<?= esc($page->url()) ?>">
     <input type="hidden" name="language" value="<?= $kirby->languageCode() ?>">
-    <div class="form-wrapper flex flex-col items-start gap-35">
-      <div class="fields flex flex-row flex-wrap gap-x-20 gap-y-25 w-full">
+    <div class="form-wrapper">
+      <div class="fields">
         <?php if(!$formpage->checkEmailField()): ?>
-          <div class="w-full flex flex-col gap-5 restricted-field">
+          <div class="email-field-restricted restricted-field">
             <h5><label for="email">Email</label></h5>  
             <input 
-              class="w-full rounded-sm border-black border-solid border-2 px-5 py-5 <?= (!empty($errors) && !empty($errors['data']) && array_key_exists('email', $errors['data'])) ? 'border-red-800' : ''; ?>" 
+              class="<?= (!empty($errors) && !empty($errors['data']) && array_key_exists('email', $errors['data'])) ? 'error' : ''; ?>" 
               type="email" 
               id="email"
               name="email"
@@ -53,7 +53,7 @@
               data-type="email"
             />
             <?php if(!empty($errors) && !empty($errors['data']) && array_key_exists('email', $errors['data'])): ?>
-              <p class="text-base text-red-800"><?= $errors['data']['email']; ?></p>
+              <p class="email-field-restricted-text"><?= $errors['data']['email']; ?></p>
             <?php endif; ?>
           </div>
         <?php endif; ?>
@@ -61,16 +61,16 @@
           <?php
             $percentage = tailwindPerecentage($block->size()->value());
             $block->size()->value() != '1/1' ? $spacing = '10px' : $spacing = '0px';
-          ?>
+          ?> 
           <?php if($block->type() == 'checkbox'): ?>
-            <div class="block-type-<?= $block->type() ?> checkbox <?= $data != NULL && isset($data[$block->uniqueidentifier()->value()]) ? 'checked' : ''?> w-full flex gap-10">
+            <div class="block-type-<?= $block->type() ?> checkbox <?= $data != NULL && isset($data[$block->uniqueidentifier()->value()]) ? 'checked' : ''?>">
               <?php snippet('blocks/' . $block->type(), [
                 'block' => $block,
                 'data' => $data,
                 'errors' => $errors
               ]) ?>
           <?php elseif($block->type() == 'file'): ?>
-            <div class="block-type-<?= $block->type() ?> form-file-block w-full flex flex-col gap-25 mt-15 mb-15">
+            <div class="block-type-<?= $block->type() ?> form-file-block">
               <?php snippet('blocks/' . $block->type(), [
                 'block' => $block,
                 'files' => $files,
@@ -78,7 +78,7 @@
                 'language' => $language
               ]) ?>
           <?php else: ?>
-            <div class="block-type-<?= $block->type() ?> dynamic-width flex flex-col gap-5 <?= $block->required()->toBool() === true ? 'restricted-field' : '' ?>" style="--block-width: <?= $percentage ?>; --block-offset: <?= $spacing ?>;">
+            <div class="block-type-<?= $block->type() ?> dynamic-width form-block <?= $block->required()->toBool() === true ? 'restricted-field' : '' ?>" style="--block-width: <?= $percentage ?>; --block-offset: <?= $spacing ?>;">
               <h5><label for="<?= $block->uniqueidentifier()?>"><?= ucfirst($block->fieldlabel())?></label></h5>   
               <?php snippet('blocks/' . $block->type(), [
                 'block' => $block,
@@ -88,7 +88,7 @@
           <?php endif; ?>
             </div>
         <?php endforeach; ?>
-        <div class="w-full flex flex-col gap-10 checkbox checbox-gdpr <?= $data != NULL && isset($data[$block->uniqueidentifier()->value()]) ? 'checked' : ''?>">
+        <div class="checkbox checbox-gdpr <?= $data != NULL && isset($data[$block->uniqueidentifier()->value()]) ? 'checked' : ''?>">
           <input 
             type="checkbox" 
             data-type="checkbox"
@@ -106,9 +106,9 @@
             </label>
           </h5>  
         </div>
-        <div class="w-full g-recaptcha [&_.rc-anchor-checkbox]:cursor-pointer" data-sitekey="<?= $formpage->recaptchaSiteKey() ?>"></div>
+        <div class="g-recaptcha" data-sitekey="<?= $formpage->recaptchaSiteKey() ?>"></div>
       </div>
-      <button class="send-button send-button-<?=$formpage->sendButtonType() ?> px-15 py-5 rounded-sm" type="submit"><?= $formpage->sendButtonText() ?></button>
+      <button class="send-button send-button-<?=$formpage->sendButtonType() ?>" type="submit"><?= $formpage->sendButtonText() ?></button>
     </div>
   </form>
 <?php endif; ?>

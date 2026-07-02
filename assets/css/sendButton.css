@@ -1,3 +1,8 @@
+.send-button {
+    padding: 5px 15px;
+    border-radius: 4px;
+}
+
 .send-button.send-button-border {
     border: 2px solid var(--color-black);
 }

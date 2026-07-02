@@ -2,6 +2,9 @@
 @import './select.css';
 @import './file.css';
 @import './sendButton.css';
+@import './input.css';
+@import './textarea.css';
+@import './form.css';
 
 .restricted-field h5::after {
   content: "*";
@@ -25,4 +28,18 @@ textarea {
   .dynamic-width {
     width: calc(var(--block-width) - var(--block-offset));
   }
+}
+
+.form-block {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.g-recaptcha {
+  width: 100%;
+}
+
+.g-recaptcha .rc-anchor-checkbox {
+  cursor: pointer;
 }
