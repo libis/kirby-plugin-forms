@@ -3,8 +3,18 @@
     text-decoration: underline;
 }
 
+.file-selector {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
 .file-selector .file-before-error, .file-selector .file-after-error {
     color: oklch(44.4% 0.177 26.899);
+}
+
+.file-selector .eror-list {
+    list-style: disc;
 }
 
 .file-selector .file-after-error li {

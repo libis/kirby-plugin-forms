@@ -9,11 +9,11 @@
             ]);
         ?>
     </span>
-    <span class="file-error w-full flex flex-col">
+    <span class="file-error">
         <span class="file-before-error form-text-hidden"></span>
         <span class="file-after-error">
             <?php if($errors != NULL && isset($errors['data']) && isset($errors['data'][$block->uniqueidentifier()->value()])): ?>
-                <ul class="list-disc">
+                <ul class="eror-list">
                     <?php foreach($errors['data'][$block->uniqueidentifier()->value()] as $error): ?>
                         <li><?= $error ?></li>
                     <?php endforeach; ?>
