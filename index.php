@@ -19,7 +19,7 @@ load([
 
 Kirby::plugin('libis/forms', [
 	'pageModels' => [
-    'form' => FormPage::class,
+  	'form' => FormPage::class,
   ],
 	'blockModels' => [
     'form' => Form::class
@@ -115,7 +115,24 @@ Kirby::plugin('libis/forms', [
 					}
 
 					if(empty($errors)) {
-						$mails = $formBlock->sendMails($data, $files, $requestUrl, $languageCode);
+						$sendMail = "";
+						$data['Page'] = $siteUrl . '/' . $pageUrl;
+						$fromDataPage = $formBlock->formpage()->toPage();
+						if($fromDataPage) {
+							foreach($fromDataPage->formfields()->toBlocks() as $block) {
+								if($block->type() == 'select') {
+									if($block->optionType() == 'email') {
+										foreach($block->optionsEmail()->toBlocks() as $emailSelect) {
+											if($emailSelect->value() == $_POST[$block->uniqueidentifier()->toString()]) {
+												$sendMail = $emailSelect->email()->toString();
+											}
+										}
+									}
+								}
+							}
+						}
+
+						$mails = $formBlock->sendMails($data, $files, $requestUrl, $languageCode, $sendMail);
 
 						if(empty($mails)) {
 							$succesMessage = t('libis.forms.succes.send.message', 'Je gegevens zijn met succes verzonden.');
@@ -170,7 +187,8 @@ Kirby::plugin('libis/forms', [
 		'blocks/checkbox' => __DIR__ . '/blueprints/blocks/formfields/03_checkbox.yml',
 		'blocks/select' => __DIR__ . '/blueprints/blocks/formfields/04_select.yml',
 		'blocks/file' => __DIR__ . '/blueprints/blocks/formfields/05_file.yml',
-		'blocks/selectoption' => __DIR__ . '/blueprints/blocks/formfields/subformfields/selectoption.yml',
+		'blocks/selectOption' => __DIR__ . '/blueprints/blocks/formfields/subformfields/selectOption.yml',
+		'blocks/selectOptionEmail' => __DIR__ . '/blueprints/blocks/formfields/subformfields/selectOptionEmail.yml',
 	],
 	'snippets' => [
 		'blocks/form' => __DIR__ . '/snippets/blocks/form.php',

@@ -15,9 +15,13 @@
     "libis.forms.button.type.noborder": "Geen border / geen achtergrondkleur",
     "libis.forms.button.type.border": "Border",
     "libis.forms.button.type.filled": "Achtergrondkleur",
+    "libis.forms.type": "type",
+    "libis.forms.block.select.type.normal": "Zonder emailadres",
+    "libis.forms.block.select.type.mail": "Met verzend en ontvangmailadres",
+    "libis.mail": "Email",
 
     "libis.forms.files.begin.info": "(Maximum {max} afbeelding(en) van het formaat jpg/jpeg/png. Max 2MB.)",
-    "libis.forms.GDPR": "Ik ga er mee akoord dat de gegevens die ik hierboven heb ingevuld doorgestuurd mogen worden naar de beheerder van de website voor het verweken van het formulier.",
+    "libis.forms.GDPR": "Ik ga er mee akoord dat de gegevens die ik hierboven heb ingevuld doorgestuurd mogen worden naar de beheerder van de website voor het verwerken van het formulier.",
 
     "libis.forms.imageInfo": "Bestand: {name}, Grootte: {size}",
     "libis.forms.wrongFileExtension": "{name} is geen geldig bestandstype.",
@@ -72,5 +76,8 @@
     "libis.forms.page.form.send.mail": "Verzend emailadres",
     "libis.forms.page.form.send.mail.info": "Emailadres waarvan het formulier zal verzonden worden",
     "libis.forms.page.form.receive.mail": "Ontvang emailadres",
-    "libis.forms.page.form.receive.mail.info" : "Emailadres waar de mail naar toe mag gestuurd worden nadat de gebruiker deze heeft ingevuld."
+    "libis.forms.page.form.receive.mail.info" : "Emailadres waar de mail naar toe mag gestuurd worden nadat de gebruiker deze heeft ingevuld.",
+
+    "libis.forms.new.form.filled.in.admin.subject" : "Nieuw formulier ingediend op de website",
+    "libis.forms.new.form.filled.in.user.subject" : "Ontvangstbevestiging van je formulier"
 }

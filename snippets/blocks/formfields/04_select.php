@@ -1,5 +1,10 @@
 <?php 
-  $options = $block->options()->toBlocks();
+if($block->optiontype()->value() == 'normal') {
+  $options = $block->optionsnormal()->toBlocks();
+}
+else {
+  $options = $block->optionsemail()->toBlocks();
+}
 ?>
 <div class="select-wrapper">
   <select 

@@ -106,7 +106,7 @@
             </label>
           </h5>  
         </div>
-        <div class="g-recaptcha" data-sitekey="<?= $formpage->recaptchaSiteKey() ?>"></div>
+        <div class="w-full g-recaptcha [&_.rc-anchor-checkbox]:cursor-pointer" data-sitekey="<?= $formpage->recaptchaSiteKey() ?>"></div>
       </div>
       <button class="send-button send-button-<?=$formpage->sendButtonType() ?> px-15 py-5 rounded-sm" type="submit"><?= $formpage->sendButtonText() ?></button>
     </div>

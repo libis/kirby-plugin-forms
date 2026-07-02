@@ -27,9 +27,28 @@ fields:
       1/1: 1/1
       1/2: 1/2
     width: 1/2
-  options:
+  optiontype:
+    label: libis.forms.type
+    type: select
+    default: normal
+    options: 
+      normal: 
+        *: libis.forms.block.select.type.normal
+      email:
+        *: libis.forms.block.select.type.mail
+  optionsnormal:
     label: libis.forms.options
     type: blocks
     pretty: true
     fieldsets:
-      - selectoption
+      - selectOption
+    when: 
+      optiontype: normal
+  optionsemail:
+    label: libis.forms.options
+    type: blocks
+    pretty: true
+    fieldsets:
+      - selectOptionEmail
+    when: 
+      optiontype: email

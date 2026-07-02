@@ -15,6 +15,10 @@
     "libis.forms.button.type.noborder": "Pas de bordure / pas de couleur de fond",
     "libis.forms.button.type.border": "Bordure",
     "libis.forms.button.type.filled": "Couleur de fond",
+    "libis.forms.type": "type",
+    "libis.forms.block.select.type.normal": "Sans adresse e-mail",
+    "libis.forms.block.select.type.mail": "Avec adresse e-mail d'envoi et de réception",
+    "libis.mail": "Email",
 
     "libis.forms.files.begin.info": "(Maximum {max} image(s) au format jpg/jpeg/png. Max 2 Mo.)",
     "libis.forms.GDPR": "J'accepte que les données que j'ai saisies ci-dessus soient transmises à l'administrateur du site pour le traitement de ce formulaire.",
@@ -72,5 +76,8 @@
     "libis.forms.page.form.send.mail": "Adresse email d'envoi",
     "libis.forms.page.form.send.mail.info": "Adresse email à partir de laquelle le formulaire sera envoyé",
     "libis.forms.page.form.receive.mail": "Adresse email de réception",
-    "libis.forms.page.form.receive.mail.info" : "Adresse email à laquelle le message sera envoyé après que l'utilisateur l'aura rempli."
+    "libis.forms.page.form.receive.mail.info" : "Adresse email à laquelle le message sera envoyé après que l'utilisateur l'aura rempli.",
+
+    "libis.forms.new.form.filled.in.admin.subject": "Nouveau formulaire soumis sur le site web",
+    "libis.forms.new.form.filled.in.user.subject": "Confirmation de réception de votre formulaire"
 }

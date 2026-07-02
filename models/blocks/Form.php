@@ -203,44 +203,53 @@ class Form extends Block
         return $data;
     }
 
-    public function sendMails($data, $files, $requestUrl, $language) {
+    public function sendMails($data, $files, $requestUrl, $language,  $sendMail = "") {
         $errors = [];
         $formpage = $this->formpage()->toPages()->first(); 
 
         $from = $formpage->sendMail()->value();
         $toPatrnerMail = $formpage->receiveMail()->value();
 
-        
+        if($sendMail != "") {
+            $from = $sendMail;
+            $toPatrnerMail = $sendMail;
+        }
+        else {
+            $from = $formpage->sendMail()->value();
+            $toPatrnerMail = $formpage->receiveMail()->value();
+        }
+
         $attachments = $this->prepareKirbyAttachments($files);
 
         try {
             kirby()->email([
                 'from'    => $from,
+                'replyTo'  => $from,
                 'to'      => $toPatrnerMail,
-                'template' => 'mail-beheerder',
-                'subject' => 'test',
+                'template' => 'mail-beheerder-' . $language,
+                'subject' => t('libis.forms.new.form.filled.in.admin.subject'),
                 'data' => [
                     'data' => $data,
                 ],
                 'attachments' => $attachments
             ]);
         } catch (Exception $error) {
-            $errors[] = $translation = t('libis.forms.went.wrong.mail.admin', null, $language);
+            $errors[] = [$translation => t('libis.forms.went.wrong.mail.admin', null, $language)];
         }
 
         try {
             kirby()->email([
                 'from'    => $from,
                 'to'      => $data['email'],
-                'template' => 'mail-beheerder',
-                'subject' => 'test',
+                'template' => 'mail-gebruiker-' . $language,
+                'subject' => t('libis.forms.new.form.filled.in.user.subject'),
                 'data' => [
                     'data' => $data,
                 ],
                 'attachments' => $attachments
             ]);
         } catch (Exception $error) {
-            $errors[] = $translation = t('libis.forms.went.wrong.mail.user', null, $language);
+            $errors[] = [$translation => t('libis.forms.went.wrong.mail.user', null, $language)];
         }
 
         return $errors;

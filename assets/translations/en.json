@@ -15,6 +15,10 @@
     "libis.forms.button.type.noborder": "No border / no background color",
     "libis.forms.button.type.border": "Border",
     "libis.forms.button.type.filled": "Background color",
+    "libis.forms.type": "type",
+    "libis.forms.block.select.type.normal": "Without email address",
+    "libis.forms.block.select.type.mail": "With sender and recipient email address",
+    "libis.mail": "Email",
 
     "libis.forms.files.begin.info": "(Maximum {max} image(s) in jpg/jpeg/png format. Max 2MB.)",
     "libis.forms.GDPR": "I agree that the data I have entered above may be forwarded to the website administrator for processing this form.",
@@ -72,5 +76,8 @@
     "libis.forms.page.form.send.mail": "Send email address",
     "libis.forms.page.form.send.mail.info": "Email address from which the form will be sent",
     "libis.forms.page.form.receive.mail": "Receive email address",
-    "libis.forms.page.form.receive.mail.info" : "Email address to which the form may be sent after the user has completed it."
+    "libis.forms.page.form.receive.mail.info" : "Email address to which the form may be sent after the user has completed it.",
+
+    "libis.forms.new.form.filled.in.admin.subject": "New form submitted on the website",
+    "libis.forms.new.form.filled.in.user.subject": "Confirmation of receipt of your form"
 }

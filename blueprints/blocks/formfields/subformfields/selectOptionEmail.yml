@@ -1,0 +1,22 @@
+name: Select option Email
+icon: plus
+
+fields:
+  label:
+    label: libis.forms.label
+    type: text
+    width: 1/2
+    required: true
+  value:
+    label: libis.forms.value
+    type: slug
+    required: true
+    wizard:
+      text: " "
+      field: label
+    width: 1/2
+  email:
+    label: libis.mail
+    type: text
+    width: 1/2
+    required: true
