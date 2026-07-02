@@ -208,11 +208,11 @@ class Form extends Block
         $formpage = $this->formpage()->toPages()->first(); 
 
         $from = $formpage->sendMail()->value();
-        $toPatrnerMail = $formpage->receiveMail()->value();
+        $toPartnerMail = $formpage->receiveMail()->value();
 
         if($sendMail != "") {
             $from = $sendMail;
-            $toPatrnerMail = $sendMail;
+            $toPartnerMail = $sendMail;
         }
         else {
             $from = $formpage->sendMail()->value();
