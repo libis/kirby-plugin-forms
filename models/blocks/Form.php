@@ -216,7 +216,7 @@ class Form extends Block
         }
         else {
             $from = $formpage->sendMail()->value();
-            $toPatrnerMail = $formpage->receiveMail()->value();
+            $toPartnerMail = $formpage->receiveMail()->value();
         }
 
         $attachments = $this->prepareKirbyAttachments($files);
@@ -225,7 +225,7 @@ class Form extends Block
             kirby()->email([
                 'from'    => $from,
                 'replyTo'  => $from,
-                'to'      => $toPatrnerMail,
+                'to'      => $toPartnerMail,
                 'template' => 'mail-beheerder-' . $language,
                 'subject' => t('libis.forms.new.form.filled.in.admin.subject'),
                 'data' => [
@@ -234,7 +234,7 @@ class Form extends Block
                 'attachments' => $attachments
             ]);
         } catch (Exception $error) {
-            $errors[] = [$translation => t('libis.forms.went.wrong.mail.admin', null, $language)];
+            $errors[] = t('libis.forms.went.wrong.mail.admin', null, $language);
         }
 
         try {
@@ -249,7 +249,7 @@ class Form extends Block
                 'attachments' => $attachments
             ]);
         } catch (Exception $error) {
-            $errors[] = [$translation => t('libis.forms.went.wrong.mail.user', null, $language)];
+            $errors[] = t('libis.forms.went.wrong.mail.user', null, $language);
         }
 
         return $errors;
