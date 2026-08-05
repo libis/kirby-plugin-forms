@@ -10,6 +10,7 @@ Een Kirby CMS-plugin voor het beheren, weergeven en verwerken van formulieren.
 - Configureer ontvangers, onderwerp en bevestigingsberichten.
 - Herbruik formulieren op meerdere pagina's.
 - Volledig geïntegreerd in Kirby CMS.
+- Select veld met de optie om het ontvang adres (email) te veranderen afhankelijk van de optie
 
 <br/>
 
@@ -106,16 +107,22 @@ Wanneer de plugin wordt toegevoegd aan je project zal de plugin automatisch een 
 
 Op de forms pagina kan je de formulieren samenstellen. 
 1. Voeg formulierpagina toe
-2. Voeg formuliervelden naar keuze toe (zie alle opties bij [formulierveld opties](#formulierveld-opties))
-
+2. Voeg formuliervelden naar keuze toe (zie alle opties bij [formulierveld opties](#user-content-formulierveld-opties))
+3. Ga naar een pagina naar keuze waar vrije content mogelijk op is (layout of blocks field)
+4. Voeg een form blok toe en selecteer welk formulier je wilt toevoegen.
 
 ### Formulierveld opties
 - Input veld (tekst, email, telefoonnummer, nummer, url)
 - Tekstveld
 - Checkbox
-- Select
+- Select (met email configuratie of niet)
 - File input
 
 ### Customalisatie
+Je kan de look and feel van het formulier helemaal naar je hand zetten door de snippets van het formulier of van formuliervelden over te kopiëren in je eigen project. 
+LET OP: Als je forumuliervelden overkopieerd dan is de naam en plaats niet dezelfde. `formfields/01_input` plaats je rechtstreeks in `snippets/blocks/input`
 
 ### Emails verzenden
+Er zijn standaardtemplates voor de mail die verzonden wordt naar zowel de persoon die het formulier heeft ingevuld als de persoon die het moet ontvangen (het bedrijf). Deze kunnen volledig gepersonaliseerd worden door de emailtemplates uit `templates/email` over te kopiëren naar je project.
+
+Wil je iets aanpassen in de code van de route die voor de verzending zorgt? Maak in je project een route (niet hetzelfde path) en kopieer de code over die in de huidige route zit en pas aan. LET OP: kopieer dan ook je snippet van je form in je project en pas de route daar aan naar de nieuwe.
