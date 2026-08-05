@@ -111,6 +111,8 @@ Op de forms pagina kan je de formulieren samenstellen.
 3. Ga naar een pagina naar keuze waar vrije content mogelijk op is (layout of blocks field)
 4. Voeg een form blok toe en selecteer welk formulier je wilt toevoegen.
 
+<br/>
+
 ### Formulierveld opties
 - Input veld (tekst, email, telefoonnummer, nummer, url)
 - Tekstveld
