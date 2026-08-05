@@ -187,7 +187,7 @@ Kirby::plugin('libis/forms', [
 		'blocks/checkbox' => __DIR__ . '/blueprints/blocks/formfields/03_checkbox.yml',
 		'blocks/select' => __DIR__ . '/blueprints/blocks/formfields/04_select.yml',
 		'blocks/file' => __DIR__ . '/blueprints/blocks/formfields/05_file.yml',
-		'blocks/selectOption' => __DIR__ . '/blueprints/blocks/formfields/subformfields/selectOption.yml',
+		'blocks/selectOptionNormal' => __DIR__ . '/blueprints/blocks/formfields/subformfields/selectOption.yml',
 		'blocks/selectOptionEmail' => __DIR__ . '/blueprints/blocks/formfields/subformfields/selectOptionEmail.yml',
 	],
 	'snippets' => [

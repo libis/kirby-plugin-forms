@@ -41,7 +41,7 @@ fields:
     type: blocks
     pretty: true
     fieldsets:
-      - selectOption
+      - selectOptionNormal
     when: 
       optiontype: normal
   optionsemail:
