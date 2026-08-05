@@ -118,9 +118,13 @@ Op de forms pagina kan je de formulieren samenstellen.
 - Select (met email configuratie of niet)
 - File input
 
+<br/>
+
 ### Customalisatie
 Je kan de look and feel van het formulier helemaal naar je hand zetten door de snippets van het formulier of van formuliervelden over te kopiëren in je eigen project. 
 LET OP: Als je forumuliervelden overkopieerd dan is de naam en plaats niet dezelfde. `formfields/01_input` plaats je rechtstreeks in `snippets/blocks/input`
+
+<br/>
 
 ### Emails verzenden
 Er zijn standaardtemplates voor de mail die verzonden wordt naar zowel de persoon die het formulier heeft ingevuld als de persoon die het moet ontvangen (het bedrijf). Deze kunnen volledig gepersonaliseerd worden door de emailtemplates uit `templates/email` over te kopiëren naar je project.
