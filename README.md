@@ -38,6 +38,24 @@ RUN wget --no-verbose "https://github.com/libis/kirby-plugin-forms/archive/${KIR
 
 <br/>
 
+### Stijl & functionaliteiten
+#### Stijl
+Deze plugin komt met een standaard styling deze kan je aanpassen door de classes in je iegen css op te roepen en aan te passen. Gebruik je tailwind voeg deze file dan niet toe en kopieer alle snippet files naar je project in `site/snippets` en voeg de classes toe.
+Voeg dit in je head toe:
+```
+<link rel="stylesheet" href="/media/plugins/libis/forms/css/index.css">
+```
+
+<br/>
+
+#### Functionaliteiten
+Voeg volgende JS file toe in je footer (zonder deze file zal de plugin niet werken):
+```
+<script defer type="module" src='/media/plugins/libis/forms/js/index.js'></script>
+```
+
+<br/>
+
 ## Configuratie
 ### Recaptcha
 Voeg volgende gegevens in `env.php`:
@@ -84,3 +102,20 @@ Let op dit overschrijft heel de navigatie voor meer info bekijk de officiële [h
 <br/>
 
 ## Gebruik
+Wanneer de plugin wordt toegevoegd aan je project zal de plugin automatisch een `forms` pagina creëeren. Deze kan je bereiken via `/panel/pages/forms`.
+
+Op de forms pagina kan je de formulieren samenstellen. 
+1. Voeg formulierpagina toe
+2. Voeg formuliervelden naar keuze toe (zie alle opties bij [formulierveld opties](#formulierveld-opties))
+
+
+### Formulierveld opties
+- Input veld (tekst, email, telefoonnummer, nummer, url)
+- Tekstveld
+- Checkbox
+- Select
+- File input
+
+### Customalisatie
+
+### Emails verzenden
