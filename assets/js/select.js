@@ -1,3 +1,4 @@
+// make a custom selection component get the options and copy them in a div an handle the select
 function select(selectWrapper) {
     const selectItem = selectWrapper.querySelector('select');
     const selectLength = selectItem.length;

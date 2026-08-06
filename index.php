@@ -1,4 +1,5 @@
 <?php
+// handle form items that are not oer the full width of teh screen
 function tailwindPerecentage($fraction) {
 	$map = [
 		'1/2' => '50%',
@@ -25,6 +26,7 @@ Kirby::plugin('libis/forms', [
     'form' => Form::class
   ],
 	'routes' => [
+		//function to handle a form send
 		[
 			'pattern' => 'form-send',
 			'method' => 'POST',
@@ -35,8 +37,10 @@ Kirby::plugin('libis/forms', [
 				$data = [];
 				$files = [];
 
+				//check if csrf toke given is valid if not go back with an error
 				$token = $_POST['csrf'];
 				if (csrf($token) === true) {
+					//check if the url sending it from is a page otherwise use the homepage
 					$languageCode = $_POST['language'];
 					$siteUrl = site()->url($languageCode);
 					$requestUrl = $_POST['origin'];
@@ -56,8 +60,10 @@ Kirby::plugin('libis/forms', [
 						$pageUrl = ltrim($pageUrl, '/');
 					}
 
+					//check if the page excist
 					$requestPage = kirby()->page($pageUrl);
 
+					// find the block where the form is set, search the chose form in teh block and get the fields of that form
 					$blockId = $_POST['block-id'];
 					$formBlock = [];
 					$page_fields = $requestPage->blueprint()->fields();
@@ -90,13 +96,17 @@ Kirby::plugin('libis/forms', [
 						}
 					}
 
+					//if the block is found the form excist otherwise give an error or go to homepage
 					if($formBlock != null) {
+						//check the recaptcha
 						if (!$formBlock->isCaptchaValid($secretKey, $_POST)) {
 							$errors[] = t('libis.forms.unvalid.recaptcha', 'Gelieve de recaptcha in te vullen', $languageCode);
 						}
 
+						//check if the data is the correct format 
 						$checkedData = $formBlock->checkData($_POST, $_FILES, $languageCode);
 
+						// if there are errors set it ready to go back to the page i was send from with the errors
 						if (!empty($checkedData['errors'])) {
 							$errors['data'] = $checkedData['errors'];
 							$data = $checkedData['data'];
@@ -114,6 +124,7 @@ Kirby::plugin('libis/forms', [
 						$errors[] = t('libis.forms.something.went.wrong', 'Er liep iets mis bij het verzenden. Probeer het later opnieuw. Blijft dit probleem zich voordoen neem dan contact op met de beheerder van de website.', $languageCode);
 					}
 
+					// if no errors try to check what the needed sendmail will be
 					if(empty($errors)) {
 						$sendMail = "";
 						$data['Page'] = $siteUrl . '/' . $pageUrl;
@@ -132,6 +143,7 @@ Kirby::plugin('libis/forms', [
 							}
 						}
 
+						//try to send teh mails
 						$mails = $formBlock->sendMails($data, $files, $requestUrl, $languageCode, $sendMail);
 
 						if(empty($mails)) {

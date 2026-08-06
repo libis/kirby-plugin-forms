@@ -1,3 +1,4 @@
+// this function will work before the form is send and will include some extra data so the backend can handle the data
 function form(formElement) {
   const block = formElement.dataset.block;
   const formdata = new FormData(formElement);

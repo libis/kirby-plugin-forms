@@ -1,4 +1,5 @@
 let t = "";
+//function to let the user select an image from their device and check if the chosen image is correct for the standards (for example not to big)
 function files(fileWrapper, translation) {
   const input = fileWrapper.querySelector('input');
   const preview = fileWrapper.querySelector(".preview");
@@ -109,7 +110,7 @@ function files(fileWrapper, translation) {
       });
   }
 
-  //if php render the 
+  //if php render the images
   const filesFromServer = input.dataset.files;
 
   if (filesFromServer) {
@@ -125,19 +126,22 @@ function files(fileWrapper, translation) {
   }
 }
 
+//acepted file types
 const fileTypes = ["image/jpeg", "image/jpg", "image/png", "image/webp"];
 
+// check if the given file is the same format of the types that are accepted
 function validFileType(file) {
   return fileTypes.includes(file.type);
 }
 
+// function to get the file size of an given file
 const returnFileSize = size =>
   size < 1e3 ? `${size} bytes` :
   size < 1e6 ? `${(size / 1e3).toFixed(1)} KB` :
   `${(size / 1e6).toFixed(1)} MB`;
 
 
-
+// function to get the translated eroor messages
 function translate(key, replacements = {}) {
   const raw = t[key];
   let text = typeof raw === "string" ? raw : key;

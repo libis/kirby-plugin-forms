@@ -4,6 +4,7 @@ use Kirby\Cms\Block;
 
 class Form extends Block
 {
+    // function to check if the recaptcha code is valid so the form can be send save
     public function isCaptchaValid($secretKey, $data){
         $captcha = isset($data['g-recaptcha-response']) ? $data['g-recaptcha-response'] : false;
 
@@ -38,6 +39,8 @@ class Form extends Block
         return $googleApiResponseObject->success;
     }
 
+    // function that will check if the values doesn't have values that are dangerous if so strip them and if needed send an error
+    // check also if the filled in item is of the type we expect otherwise send an error back
     public function checkData($data, $files, $language) {
         $checkedData = [];
         $errors = [];
@@ -196,6 +199,7 @@ class Form extends Block
         ];
     }
 
+    // function to strip data if needed so dangerous data will not be saved
     private function makeDataSafe($data) {
         $data = trim($data);
         $data = stripslashes($data);
@@ -203,6 +207,7 @@ class Form extends Block
         return $data;
     }
 
+    //function that will send 2 mails one to the email of the company of the email that is set diffrent for a select in a form and one to the person who filled in the form
     public function sendMails($data, $files, $requestUrl, $language,  $sendMail = "") {
         $errors = [];
         $formpage = $this->formpage()->toPages()->first(); 
@@ -255,7 +260,7 @@ class Form extends Block
         return $errors;
     }
 
-    
+    // if a file is send prepare them to send it in the mail
     private function prepareKirbyAttachments(array $files): array {
         $attachments = [];
 
