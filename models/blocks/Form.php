@@ -60,7 +60,7 @@ class Form extends Block
             $safeValue = $this->makeDataSafe($value);
 
             if($type == "text" || $type == "textarea") {
-                if (!empty($safeValue) && !preg_match('/^[\p{L}\p{N}€@+=#^*\/\\\\\-\.,!?()\[\]{}:;\'" \r\n\t]+$/u', $safeValue)) {
+                if (!empty($safeValue) && !preg_match('/^[\p{L}\p{N}€@+=#^*\/\\\\\-\.,!?()\[\]{}:;"\'’‘`´ \r\n\t]+$/u', $safeValue)) {
                     $translation = t('libis.forms.text.input.error', null, $language);
                     $errors[$key] = Str::template($translation, [
                         'key' => $key,
