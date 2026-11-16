@@ -66,7 +66,7 @@ class Form extends Block
                         'key' => $key,
                         'value' => $safeValue
                     ]);
-                    $checkedData[$key] = $safeValue;
+                    $checkedData[$key] = htmlspecialchars($safeValue, ENT_QUOTES, 'UTF-8');
                 }
                 else {
                     $checkedData[$key] = $safeValue;
@@ -79,7 +79,7 @@ class Form extends Block
                         'key' => $key,
                         'value' => $safeValue
                     ]);
-                    $checkedData[$key] = $safeValue;
+                    $checkedData[$key] = htmlspecialchars($safeValue, ENT_QUOTES, 'UTF-8');
                 }
                 else {
                     $checkedData[$key] = $safeValue;
@@ -92,7 +92,7 @@ class Form extends Block
                         'key' => $key,
                         'value' => $safeValue
                     ]);
-                    $checkedData[$key] = $safeValue;
+                    $checkedData[$key] = htmlspecialchars($safeValue, ENT_QUOTES, 'UTF-8');
                 }
                 else {
                     $checkedData[$key] = $safeValue;
@@ -105,7 +105,7 @@ class Form extends Block
                         'key' => $key,
                         'value' => $safeValue
                     ]);
-                    $checkedData[$key] = $safeValue;
+                    $checkedData[$key] = htmlspecialchars($safeValue, ENT_QUOTES, 'UTF-8');
                 }
                 else {
                     $checkedData[$key] = $safeValue;
@@ -113,7 +113,7 @@ class Form extends Block
             }
             elseif($type == "number") {
                 if(empty($safeValue)) {
-                    $checkedData[$key] = $safeValue;
+                    $checkedData[$key] = htmlspecialchars($safeValue, ENT_QUOTES, 'UTF-8');
                 }
                 else {
                     if(filter_var($safeValue, FILTER_VALIDATE_INT, array("options" => array("min_range"=>0)))) {
@@ -128,7 +128,7 @@ class Form extends Block
                             'key' => $key,
                             'value' => $safeValue
                         ]);
-                        $checkedData[$key] = $safeValue;
+                        $checkedData[$key] = htmlspecialchars($safeValue, ENT_QUOTES, 'UTF-8');
                     }
                 }
             }
@@ -203,7 +203,6 @@ class Form extends Block
     private function makeDataSafe($data) {
         $data = trim($data);
         $data = stripslashes($data);
-        $data = htmlspecialchars($data);
         return $data;
     }
 
